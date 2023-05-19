@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:micro_core/app/micro_app.dart';
 import 'package:micro_core/app/utils.dart';
 
-abstract class BaseApp {
+mixin BaseApp {
   List<MicroApp> get microApps;
   Map<String, WidgetBuilderArgs> get baseRoutes;
   final Map<String, WidgetBuilderArgs> routes = {};
