@@ -31,10 +31,12 @@ mixin BaseApp {
     final route = routes[routeName];
     if (route == null) return null;
 
-    return MaterialPageRoute(
-      builder: (context) => route(
-        context,
-        args,
+    return PageRouteBuilder(
+      settings: routeSettings,
+      pageBuilder: (ctx, __, ___) => route(ctx, args),
+      transitionsBuilder: (_, a, __, c) => FadeTransition(
+        opacity: a,
+        child: c,
       ),
     );
   }
