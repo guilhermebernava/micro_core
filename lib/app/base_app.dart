@@ -34,6 +34,7 @@ mixin BaseApp {
     return PageRouteBuilder(
       settings: routeSettings,
       pageBuilder: (ctx, __, ___) => route(ctx, args),
+      transitionDuration: Duration(milliseconds: 600),
       transitionsBuilder: (_, a, __, c) => FadeTransition(
         opacity: a,
         child: c,
